@@ -255,7 +255,7 @@ public class WebViewLocalServer {
         if (path.equals("/") || (!request.getUrl().getLastPathSegment().contains(".") && html5mode)) {
             InputStream responseStream;
             try {
-                String startPath = this.basePath + "/index.html";
+                String startPath = this.basePath + path + "index.html";
                 if (isAsset) {
                     responseStream = protocolHandler.openAsset(startPath);
                 } else {
